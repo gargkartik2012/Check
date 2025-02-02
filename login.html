@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #5F9EA0;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Navbar Styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5% 5%;
+            background-color: #333;
+        }
+
+        nav img {
+            width: 100px;
+            height: 80px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 20px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fa-bars, .fa-times {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Main content styling */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        .form-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .login-form table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-form td {
+            padding: 10px;
+        }
+
+        .login-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+
+            .form-container {
+                margin-top: 20px;
+            }
+
+            .login-form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <a href="miniproject.html"><img src="logof.jpg" alt="Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Service.html">SERVICE</a></li>
+                <li><a href="Contact Us.html">CONTACT</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<h1>LOGIN</h1>
+
+<div class="form-container">
+    <img src="undraw_access_account_re_8spm.svg" height="300px" alt="Login Image">
+    
+    <form class="login-form">
+        <table>
+            <tr>
+                <td><b><label style="font-size:150%;">Employee Name:</label></b></td>
+                <td><input type="text" name="name" placeholder="Enter the employee Name"></td>
+            </tr>
+
+            <tr>
+                <td><b><label style="font-size:150%;">Area:</label></b></td>
+                <td><input type="text" placeholder="Enter the Area"></td>
+            </tr>
+
+            <tr>
+                <td><b><label style="font-size:150%;">Work:</label></b></td>
+                <td><input type="text" placeholder="Enter the Work"></td>
+            </tr>
+
+            <tr>
+                <td><b><label style="font-size:150%;">LOGIN ID:</label></b></td>
+                <td><input type="text" placeholder="Enter the login id"></td>
+            </tr>
+        </table>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.add("active");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("active");
+    }
+</script>
+
+</body>
+</html>

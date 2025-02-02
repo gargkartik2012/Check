@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #808080;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Navbar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 6%;
+            background-color: #333;
+        }
+
+        nav img {
+            width: 100px;
+            height: 80px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 20px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fa-bars, .fa-times {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Contact form styling */
+        form {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            max-width: 100%;
+            height: auto;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d32f2f;
+        }
+
+        hr {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .nav-links ul li {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <a href="miniproject.html"><img src="logof.jpg" alt="Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Service.html">SERVICE</a></li>
+                <li><a href="Contact Us.html">CONTACT</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<h1>Get in Touch</h1>
+
+<form>
+    <div style="display: flex; justify-content: space-between;">
+        <div>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="User No.">
+            <input type="text" placeholder="Organisation Name">
+            <input type="text" placeholder="No of User">
+        </div>
+        <div>
+            <input type="text" placeholder="Select Your Supports">
+            <input type="text" placeholder="Your Message">
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+<hr>
+<h1>Our Location</h1>
+<p style="text-align: center;">Mumbai</p>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.add("active");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("active");
+    }
+</script>
+
+</body>
+</html>
